@@ -1,0 +1,15 @@
+var request = new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all",true)
+request.send()
+ request.onload=function(){
+    var data = request.response
+    var result = JSON.parse(data)
+    //task to print Qatar ,region , subregion
+    console.log(result[31].name.common , result[31].region , result[31].subregion)
+    //task to print region,subregion,name
+    for(var obj of result){
+        console.log(obj.name.common , obj.region,obj.subregion);
+    }
+    }
+
+

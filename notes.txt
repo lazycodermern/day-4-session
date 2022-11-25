@@ -1,0 +1,35 @@
+//XMLHTTPRequest
+
+//XMLHTTPRequest:-
+step1:To create a XHR object
+XHR -XMLHTTPRequest
+syntax to create a object
+ var variablename = new XMLHTTPRequest();
+new - new is a keyword used to create a object
+step1: var request = new xmlhttprequest();
+
+Step 2 : opening a connection to the server
+3 paramaters are there to opening a connection to the server
+1.method (GET,POST,PUT, DELETE)
+2.url(from where to get the data)
+3.true/false (optional)
+step2: request.open("GET","https://restcountries.com/v3.1/all")
+
+step3:Initiating a bridge to the server / sending a connection / sending a request
+request.send()
+----completed request--------
+step4 : server response
+//onload : it is an event
+//annoymous function : A function without name is called annoymous.
+function(){
+
+}
+//response
+request.onload=function(){
+    var data = request.response
+    console.log(data);
+    console.log(JSON.parse(data));
+    }
+
+
+
